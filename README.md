@@ -2,7 +2,7 @@
 
 A bash script that downloads the EFF's Long Word List (for use with five dice) and then picks five random words using random.org's API.
 
-*Requires a valid API key to be passed in the environment `EFF_API_KEY`*
+*Requires a valid API key from random.org to be passed in the environment `EFF_API_KEY`*
 
 I cannot assure that this is a secure way to generate passwords. I chose random.org because they generate numbers based on random atmospheric phenomenon and not pseudo-random numbers generated inside a CPU. 
 
