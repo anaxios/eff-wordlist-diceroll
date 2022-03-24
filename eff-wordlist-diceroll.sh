@@ -34,7 +34,7 @@ convert_to_dice_roll() {
   local intermediate="${1}"
 
   while [[ ${intermediate} -gt 0 ]]; do
-	  result=${result}$((1+$((intermediate%6)))) # convert to base 6 then + 1
+    result=${result}$((1+$((intermediate%6)))) # convert to base 6 then + 1
     intermediate=$((intermediate/6))
   done
  echo ${result}
