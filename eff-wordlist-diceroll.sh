@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eu
+set -o pipefail
 
 if [[ -z ${EFFWL_API_KEY} ]]; then
 	echo "No API key set."
@@ -30,7 +32,7 @@ get_rand_numbers() {
 
 
 convert_to_dice_roll() {
-  local result
+  local result=""
   local intermediate="${1}"
 
   while [[ ${intermediate} -gt 0 ]]; do
