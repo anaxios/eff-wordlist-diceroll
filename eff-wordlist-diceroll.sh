@@ -15,7 +15,7 @@ clean_output() {
 }
 
 get_rand_numbers() {
-	api_stuff="{ \
+	local api_stuff="{ \
     \"jsonrpc\": \"2.0\", \
     \"method\": \"generateIntegers\", \
     \"params\": { \
@@ -43,8 +43,8 @@ convert_to_dice_roll() {
 }
 
 main() {
-  rando_nums=$(get_rand_numbers) 
-  result=""
+  local rando_nums=$(get_rand_numbers) 
+  local result=""
   for i in ${rando_nums}; do
     dice_roll=$(convert_to_dice_roll ${i})  
     result="${result} $(echo "${EFF_WORDLIST}" \
